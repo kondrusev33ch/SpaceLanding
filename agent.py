@@ -32,7 +32,6 @@ class DQN:
         self.target_model = None
         self.online_model = None
         self.optimizer = None
-        self.steps = deque(maxlen=1000)
         self.mean_rewards = deque(maxlen=1000)
 
     def train(self):
@@ -111,7 +110,6 @@ class DQN:
             # Logging
             if step % 1000 == 0:
                 print()
-                self.steps.append(step/1000)
                 print('Step:', step)
 
                 mean_reward = np.mean(self.reward_buffer)
@@ -150,7 +148,7 @@ def plot(mean_rewards):
     display.display(plt.gcf())
     plt.clf()
     plt.title('Training...')
-    plt.xlabel('Number of Steps in thousands')
+    plt.xlabel('Number of Steps (thousands)')
     plt.ylabel('Average Reward')
     plt.plot(mean_rewards)
     plt.tight_layout()
