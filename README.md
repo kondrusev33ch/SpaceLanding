@@ -1,5 +1,5 @@
 # SpaceLanding
-Capsule Landing - DRL Project (DQN)
+Capsule Landing - DRL Project (DQN) + DuelingDDQN and A3C
 ![capsule_lander](https://user-images.githubusercontent.com/85990934/137446158-eb997306-5a20-47bb-9ef3-b586f247d08d.png)
 
 ## Goals 
@@ -25,8 +25,11 @@ Reward system:
 First, we should reach the landing space as fast as possible, so we reward high falling speed which can be achieved by rotating the nose of the capsule down and turning on main engine.
 Second, we should land correctly, so we reward rotating capsule to reach 0 position (when nose looks up) and a smooth landing 
 
+## Update
+Added A3C and DuelingDDQN methods. Reworked environment.
+
 ## Resources
-Grokking DRL - https://github.com/mimoralea/gdrl/blob/master/notebooks/chapter_09/chapter-09.ipynb
+Grokking DRL - https://github.com/mimoralea/gdrl
 
 Gym CartPole DQN - https://www.youtube.com/watch?v=NP8pXZdU-5U&t=485s
 
